@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation | Welcome</title>
+    <link rel="stylesheet" href="css/foundation.css" />
+    <script src="js/vendor/modernizr.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../animate.css">
+  </head>
+  <body>
+    
+    <div class="row">
+      <div class="large-12 columns center">
+        <h1>Welcome to SimpleChat</h1>
+      </div>
+    </div>
+    
+    <div class="row">
+      <div class="large-12 columns">
+      	<ul class="pages">
+          <li class="chat page">
+            <div class="chatArea">
+              <ul class="messages"></ul>
+            </div>
+            <input class="inputMessage" placeholder="Type here..."/>
+          </li>
+          <li class="login page">
+            <div class="form">
+              <h3 class="title">What's your nickname?</h3>
+              <input class="usernameInput" type="text" maxlength="14" />
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+    <script src="../js/foundation.min.js"></script>
+    <script>
+      $(document).foundation();
+      $('.messages').css('max-height',($(window).height() - 240));
+    </script>
+  </body>
+</html>
